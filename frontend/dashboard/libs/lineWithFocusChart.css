@@ -1,0 +1,11 @@
+#line-view-finder text {
+    font: 16px sans-serif;
+}
+#line-view-finder svg {
+    display: block;
+    padding: 6px;
+}
+#line-view-finder {
+    height: 500px;
+    width: 1000px;
+}

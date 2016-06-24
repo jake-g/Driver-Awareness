@@ -1,0 +1,23 @@
+{
+    "name": "dashboard",
+    "version": "0.2.0",
+    "author": "Jake G",
+    "description": "Dashboard UW EcoCAR",
+    "repository": "dev",
+    "license": "MIT",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "rebuild": ".\\node_modules\\.bin\\electron-rebuild.cmd",
+        "build": "electron-packager . --out=dist --app-version=$npm_package_version --prune --asar --overwrite --all"
+    },
+    "devDependencies": {
+        "electron-packager": "^7.0.1",
+        "electron-prebuilt": "^0.37.8",
+        "electron-rebuild": "^1.1.4"
+    },
+    "dependencies": {
+        "d3": "^3.5.17",
+        "zmq": "^2.15.0"
+    }
+}

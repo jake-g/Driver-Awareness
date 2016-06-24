@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Dashboard</title>
+	<script type="text/javascript" src="dashboard.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/simplegrid.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" href="libs/gauge2.css">
+	<link type="text/css" rel="stylesheet" href="libs/line.css">
+	<link type="text/css" rel="stylesheet" href="libs/radial.css">
+	<link type="text/css" rel="stylesheet" href="libs/lineplot.css">
+	<link type="text/css" rel="stylesheet" href="libs/nv.d3.min.css">
+	<link type="text/css" rel="stylesheet" href="libs/lineWithFocusChart.css">
+	<title>Dashboard Demo</title>
+
+</head>
+
+
+<body>
+	<!-- Outer shell of page -->
+	<ul class="tab">
+		<li><a href="#" class="tablinks" onclick="openTab(event, 'Realtime')">
+      HUD (realtime)</a></li>
+		<li><a href="#" class="tablinks" onclick="openTab(event, 'Historical')">
+      App (historical)</a></li>
+	</ul>
+	<!-- Contrains module elements -->
+	<div id="main" style="width:auto; height:auto; margin: auto auto; ">
+
+		<!-- REALTIME TAB -->
+		<div id="Realtime" class="tabcontent">
+			<div class="gauges">
+				<!-- <center> -->
+				<div class="grid grid-pad">
+
+					<!-- First Column -->
+					<div class="col-1-2">
+						<div class="content">
+
+							<h1>Distraction</h1>
+							<div id="distraction"></div>
+
+							<h1>Sleep</h1>
+							<div id="sleep"></div>
+							<div id="sleepLine"></div>
+
+						</div>
+					</div>
+
+					<!-- Second Column -->
+					<div class="col-1-2">
+						<div class="content">
+
+							<h1>Phone</h1>
+							<div id="phone"></div>
+
+							<h1>Happy</h1>
+							<div id="happy"></div>
+						</div>
+					</div>
+				</div>
+				<!-- </center> -->
+				<h1>Warning Level</h1>
+				<div id="overall"></div>
+			</div>
+		</div>
+
+		<!-- HISTORICAL TAB -->
+		<div id="Historical" class="tabcontent">
+			<div id="lineplot">
+				<!-- <h1>Historical Data</h1> -->
+				<form id="logSelect">
+					<p>Select Log: </p>
+					<select id="selectNumber" onchange="loadLog(this.value);">
+						<option>Select a Log</option>
+					</select>
+				</form>
+				<div id="line-plot"></div>
+				<p>Slide the view finder above to inspect data.</p>
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>

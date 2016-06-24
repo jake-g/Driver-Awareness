@@ -1,0 +1,27 @@
+.gauges {
+    margin: 32px;
+}
+g.arc {
+    fill: steelblue;
+}
+g.pointer {
+    fill: #464a4f;
+    stroke: #464a4f;
+}
+g.label text {
+    text-anchor: middle;
+    font-size: 15px;
+    font-weight: bold;
+    fill: #2a2a2a;
+}
+.tickline {
+    stroke: "black";
+    stroke-width: 1px;
+}
+.number-div {
+    text-align: center;
+    color: steelblue;
+}
+.number-span {
+    font-size: 20pt;
+}
